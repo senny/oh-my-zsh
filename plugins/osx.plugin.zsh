@@ -1,3 +1,5 @@
+alias pv=preview
+
 function tab() {
   osascript 2>/dev/null <<EOF
     tell application "System Events"
@@ -8,4 +10,16 @@ function tab() {
       do script with command "cd \"$PWD\"; $*" in window 1
     end tell
 EOF
+}
+
+function flush_dns () {
+  dscacheutil -flushcache
+}
+
+function preview () {
+  qlmanage -p $1 2> /dev/null
+}
+
+function dhcp_renew () {
+  sudo ipconfig set en0 BOOTP;sudo ipconfig set en0 DHCP
 }

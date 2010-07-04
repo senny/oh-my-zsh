@@ -8,10 +8,13 @@ function c () {
 
 #compdef h
 function _h () {
-_files -W ~ -/
+  _files -W ~ -/
 }
 
 #compdef c
 function _c () {
   _files -W ~/Projects -/
 }
+
+compdef _h h
+compdef _c c

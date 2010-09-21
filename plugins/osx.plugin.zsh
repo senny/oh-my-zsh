@@ -1,4 +1,5 @@
 alias pv=preview
+alias cls='clear'
 
 function tab() {
   osascript 2>/dev/null <<EOF
@@ -13,7 +14,7 @@ EOF
 }
 
 function flush_dns () {
-  dscacheutil -flushcache
+  sudo dscacheutil -flushcache
 }
 
 function preview () {

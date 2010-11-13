@@ -1,7 +1,7 @@
 alias ec='/usr/local/Cellar/emacs/HEAD/Emacs.app/Contents/MacOS/bin/emacsclient'
 alias e=openemacs
 
-EDITOR='openemacs'
+EDITOR='/usr/local/Cellar/emacs/HEAD/Emacs.app/Contents/MacOS/bin/emacsclient'
 export EDITOR
 
 # configuration for emacs multi-term.el compatibility

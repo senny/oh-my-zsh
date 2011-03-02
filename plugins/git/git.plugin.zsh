@@ -26,7 +26,7 @@ alias gco='git checkout'
 alias gsv='git svn'
 alias gt='git tag'
 
-alias git='nocorrect git'
+alias git='nocorrect noglob git'
 #
 # Will return the current branch name
 # Usage example: git pull origin $(current_branch)

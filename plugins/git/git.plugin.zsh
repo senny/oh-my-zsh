@@ -36,6 +36,9 @@ compdef _git gst=git-status
 
 alias gp='git push'
 
+gdv() { git diff -w "$@" | view - }
+compdef _git gdv=git-diff
+
 alias gc='git commit -v'
 compdef _git gc=git-commit
 
@@ -44,6 +47,8 @@ compdef _git gca=git-commit
 
 alias gco='git checkout'
 compdef _git gco=git-checkout
+
+alias gcm='git checkout master'
 
 alias gb='git branch'
 compdef _git gb=git-branch
@@ -61,6 +66,16 @@ compdef _git glg=git-log
 
 alias gls='git log --oneline'
 compdef _git glg=git-log
+alias glgg='git log --graph --max-count=5'
+compdef _git glgg=git-log
+alias gss='git status -s'
+compdef _git gss=git-status
+alias ga='git add'
+compdef _git ga=git-add
+alias gm='git merge'
+compdef _git gm=git-merge
+alias grh='git reset HEAD'
+alias grhh='git reset HEAD --hard'
 
 alias gg='git log --graph'
 compdef _git gg=git-log
@@ -77,6 +92,7 @@ alias glg='git log --stat --max-count=5'
 compdef _git glg=git-log
 
 alias git='nocorrect noglob git'
+
 #
 # Will return the current branch name
 # Usage example: git pull origin $(current_branch)

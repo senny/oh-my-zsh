@@ -17,7 +17,7 @@ alias glr='git pull --rebase'
 compdef _git glr=git-pull
 
 alias gr='git remote'
-alias gf='git fetch'
+alias gf='git fetch && git fetch --tags'
 
 alias gp='git push'
 compdef _git gp=git-push
@@ -48,7 +48,7 @@ compdef _git gco=git-checkout
 alias gb='git branch'
 compdef _git gb=git-branch
 
-alias gba='git branch -a -v'
+alias gba='git branch -a'
 compdef _git gba=git-branch
 
 alias gcount='git shortlog -sn'
@@ -57,6 +57,9 @@ alias gcp='git cherry-pick'
 compdef _git gcp=git-cherry-pick
 
 alias glg='git log --stat'
+compdef _git glg=git-log
+
+alias gls='git log --oneline'
 compdef _git glg=git-log
 
 alias gg='git log --graph'
